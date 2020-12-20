@@ -80,14 +80,12 @@ namespace RG_v3
               break;
 
         case 3: 
-            Console.Clear();
-            Console.WriteLine("************** Editar datos **************");
-            Console.Write("Dame el nombre del registro a editar: ");
+            
         break;
 
         case 4:
             Console.Clear();
-            Console.WriteLine("************** Eliminar datos **************");
+            Console.WriteLine("************** Eliminar datos ************** ");
             Console.Write("Dame el nombre del registro a eliminar: ");
             string vDnombre = Console.ReadLine();
             string vDfile = @"Datos.csv";
