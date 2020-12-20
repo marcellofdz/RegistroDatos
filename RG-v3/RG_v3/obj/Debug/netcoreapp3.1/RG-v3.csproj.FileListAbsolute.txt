@@ -1,0 +1,13 @@
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/bin/Debug/netcoreapp3.1/RG-v3
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/bin/Debug/netcoreapp3.1/RG-v3.deps.json
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/bin/Debug/netcoreapp3.1/RG-v3.runtimeconfig.json
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/bin/Debug/netcoreapp3.1/RG-v3.runtimeconfig.dev.json
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/bin/Debug/netcoreapp3.1/RG-v3.dll
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/bin/Debug/netcoreapp3.1/RG-v3.pdb
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.csprojAssemblyReference.cache
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.AssemblyInfoInputs.cache
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.AssemblyInfo.cs
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.csproj.CoreCompileInputs.cache
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.dll
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.pdb
+/mnt/e/repos/programacionII/RegistroDatos/RG-v3/RG_v3/obj/Debug/netcoreapp3.1/RG-v3.genruntimeconfig.cache

@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/mnt/e/repos/programacionII/RegistroDatos/RG-v2/RG-v2/RG-v2.csproj": {}
+  },
+  "projects": {
+    "/mnt/e/repos/programacionII/RegistroDatos/RG-v2/RG-v2/RG-v2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/mnt/e/repos/programacionII/RegistroDatos/RG-v2/RG-v2/RG-v2.csproj",
+        "projectName": "RG-v2",
+        "projectPath": "/mnt/e/repos/programacionII/RegistroDatos/RG-v2/RG-v2/RG-v2.csproj",
+        "packagesPath": "/home/batman/.nuget/packages/",
+        "outputPath": "/mnt/e/repos/programacionII/RegistroDatos/RG-v2/RG-v2/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/batman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
