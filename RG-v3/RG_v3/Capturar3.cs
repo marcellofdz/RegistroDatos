@@ -8,12 +8,17 @@ namespace RG_v3
     {
         public static void Main(string[] args)
         {
+            
+        int vDesicion;
+        do
+        {
+            
+        Console.Clear();
              //nombre, apellido, cedula, edad, 
         Console.WriteLine("=============== Bienvenido ===============");
         Console.Write("Desea ver el menú? Y/N  : ");
         string question = Console.ReadLine();
         
-
 
         if (question == "Y" || question == "y")
         {
@@ -21,6 +26,7 @@ namespace RG_v3
         Console.WriteLine("¿Que desea hacer?");
         Console.WriteLine("[1] Agregar Información. \n[2] Buscar Información \n[3] Editar Información\n[4] Eliminar información \n[5] Salir.");
         int menu = Convert.ToInt32(Console.ReadLine());
+
 
         switch (menu)
             {
@@ -38,9 +44,14 @@ namespace RG_v3
                         Console.Write("Inserte su apellido: ");
                         string vApellido = Console.ReadLine();
                         
+                        //Console.Write("Inserte la cantidad de ahorros: ")
+                        //int vAhorros = Console.ReadLine();
 
                         Console.Write("Inserte su edad: ");
                         int vEdad = Convert.ToInt32(Console.ReadLine());
+
+                        //Console.Write("Inserte contraseña: ");
+
 
                         Console.Write("¿Quieres grabar los datos? Y/N  : ");
                         string desicion = Console.ReadLine();
@@ -89,7 +100,7 @@ namespace RG_v3
             string vECedula = Console.ReadLine();
             string vEfile = @"Datos.csv";
 
-            //editar(vEfile, vECedula);
+                 editar(vEfile, vECedula);
 
         break;
 
@@ -121,8 +132,20 @@ namespace RG_v3
             Console.WriteLine("Tenga buen día.");
         }
 
-   
+         
+
+        Console.WriteLine("¿Desea repetir el programa?\n Presione 0 para repetir opciones.");
+        vDesicion = Convert.ToInt32(Console.ReadLine());
+        if (vDesicion != 0)
+        {
+            break;
         }
+        }
+        while (true);
+
+        
+        }
+        
 
 
 #region Función Agregar datos
@@ -173,9 +196,38 @@ namespace RG_v3
 
 
 #region Función Editar datos
-        /*  public static string editar(String vEfile, String vECedula)
+         public static string editar(String vEfile, String vECedula)
         {
-                String path = vEfile;
+
+            var lines = File.ReadAllLines(vEfile);
+            //comienza en cero para tomar desde la linea 1 del documento, cuando tenga el header debo saltar la linea 1 y poner el for comience en 1
+
+            for (var i = 0; i < lines.Length; i+=1)
+            {
+                var data = lines[i];
+
+                if (!string.IsNullOrEmpty(data) && data.Contains(vECedula))
+                {   
+                    Console.Write("Inserte el nuevo nombre: ");
+                    string newNombre = Console.ReadLine();
+
+                    Console.Write("Inserte el nuevo apellido: ");
+                    string newApellido = Console.ReadLine();
+
+                    Console.Write("Inserte la nueva edad: ");
+                    Int32 newEdad = Convert.ToInt32(Console.ReadLine());
+
+                    string text = File.ReadAllText(vEfile);
+                    text = text.Replace(data, $"{vECedula},{newNombre},{newApellido},{newEdad}");
+                    File.WriteAllText(vEfile,text);
+                }
+            }
+
+
+
+
+
+               /* String path = vEfile;
                 List<String> lines = new List<String>();
 
                 if (File.Exists(path));
@@ -207,8 +259,10 @@ namespace RG_v3
                            writer.WriteLine(line);
                     }
                 }
+                return "";*/
+
                 return "";
-        }  */
+        }  
 #endregion
 
 
@@ -228,6 +282,8 @@ namespace RG_v3
                         ObjStringBuilder.AppendLine(values[i].TrimEnd('\r'));
                         }
                 File.WriteAllText(vDfile, ObjStringBuilder.ToString().TrimEnd(new char[] {'\n','\r'}),Encoding.UTF8);
+
+                Console.WriteLine("Usuario con la cedula {0} ha sido eliminado. \n",vDCedula);
                 return "";
 
         }
