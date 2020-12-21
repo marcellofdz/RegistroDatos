@@ -27,17 +27,20 @@ namespace RG_v3
           case 1:
                         Console.Clear();
                         Console.WriteLine("************** Agregar datos **************");
+                        Console.Write("Inserte su cedula: ");
+                        string vCedula = Console.ReadLine();
+                        
+
                         Console.Write("Inserte su nombre: ");
                         string vNombre = Console.ReadLine();
+                        
 
                         Console.Write("Inserte su apellido: ");
                         string vApellido = Console.ReadLine();
+                        
 
                         Console.Write("Inserte su edad: ");
                         int vEdad = Convert.ToInt32(Console.ReadLine());
-
-                        Console.Write("Inserte su Cedula: ");
-                        string vCedula = Console.ReadLine();
 
                         Console.Write("¿Quieres grabar los datos? Y/N  : ");
                         string desicion = Console.ReadLine();
@@ -80,7 +83,14 @@ namespace RG_v3
               break;
 
         case 3: 
-            
+            Console.Clear();
+            Console.WriteLine("************** Editar datos ************** ");
+            Console.Write("Dame la cedula del registro a Editar: ");
+            string vECedula = Console.ReadLine();
+            string vEfile = @"Datos.csv";
+
+            //editar(vEfile, vECedula);
+
         break;
 
         case 4:
@@ -124,10 +134,10 @@ namespace RG_v3
             // Appending the given texts 
             using(StreamWriter sw = File.AppendText(vfile)) 
             { 
-             sw.WriteLine($"{vNombre},{vApellido},{vEdad},{vCedula}");
+             sw.WriteLine($"{vCedula},{vNombre},{vApellido},{vEdad}");
             } 
 
-            Console.WriteLine($"{vNombre},{vApellido},{vEdad},{vCedula}");
+            Console.WriteLine("Cedula: " + $"{vCedula}\n" + "Nombre: " + $"{vNombre}\n" + "Apellido: "+ $"{vApellido}\n" + "Edad: " + $"{vEdad}");
                         
 /*             // Opening the file for reading 
             using(StreamReader sr = File.OpenText(vfile)) 
@@ -150,7 +160,7 @@ namespace RG_v3
                         var strLines=File.ReadLines($"{vSfile}");
                         foreach(var line in strLines)
                         {
-                            if(line.Split(',')[3].Equals(vSCedula))
+                            if(line.Split(',')[0].Equals(vSCedula))
                               Console.WriteLine(line);
                         }
 
@@ -163,11 +173,42 @@ namespace RG_v3
 
 
 #region Función Editar datos
-/*         public static string editar(String vSfile, String vSCedula)
+        /*  public static string editar(String vEfile, String vECedula)
         {
-            
+                String path = vEfile;
+                List<String> lines = new List<String>();
 
-        } */
+                if (File.Exists(path));
+                {
+                    using (StreamReader reader = new StreamReader(path))
+                    {
+                        String line;
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                        if (line.Contains(","))
+                        {
+                            String[] split = line.Split(',');
+                            if (split[4].Contains(vECedula))
+                            {
+                                split[0] = "100";
+                                line = String.Join(",", split);
+                            
+                            }
+                            
+                        }
+
+                            lines.Add(line);
+                        }
+                    }
+
+                    using (StreamWriter writer = new StreamWriter(path, false))
+                    {
+                           foreach (String line in lines)
+                           writer.WriteLine(line);
+                    }
+                }
+                return "";
+        }  */
 #endregion
 
 
@@ -182,7 +223,7 @@ namespace RG_v3
 
                 for (int i = 0; i < values.Length; i++)
                         {
-                    if (values[i].Split(',')[3] == busqueda)
+                    if (values[i].Split(',')[0] == busqueda)
                         continue;
                         ObjStringBuilder.AppendLine(values[i].TrimEnd('\r'));
                         }
