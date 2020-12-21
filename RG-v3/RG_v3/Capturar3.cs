@@ -86,11 +86,11 @@ namespace RG_v3
         case 4:
             Console.Clear();
             Console.WriteLine("************** Eliminar datos ************** ");
-            Console.Write("Dame el nombre del registro a eliminar: ");
-            string vDnombre = Console.ReadLine();
+            Console.Write("Dame la cedula del registro a eliminar: ");
+            string vDCedula = Console.ReadLine();
             string vDfile = @"Datos.csv";
 
-            eliminar(vDfile, vDnombre);
+            eliminar(vDfile, vDCedula);
         break;
 
           
@@ -173,31 +173,21 @@ namespace RG_v3
 
 
 #region Función Eliminar datos
-        public static string eliminar(String vDfile, String vDnombre)
+        public static string eliminar(String vDfile, String vDCedula)
         {
             
-                    string line = null;
-                    string line_to_delete = vDnombre;
+               string busqueda = vDCedula;
+               string[] values = File.ReadAllText(vDfile).Split(new char[] { '\n' });
+               StringBuilder ObjStringBuilder = new StringBuilder();
 
-                    using (StreamReader reader = new StreamReader(vDfile)) 
-                    {
-                        using (StreamWriter writer = new StreamWriter(vDfile)) 
+                for (int i = 0; i < values.Length; i++)
                         {
-                            while ((line = reader.ReadLine()) != null) 
-                            
-                            {
-                                if (String.Compare(line, line_to_delete) == 0)
-                                    continue;
-
-                                writer.WriteLine(line);
-                            }
-
-                            Console.WriteLine(line);
+                    if (values[i].Split(',')[3] == busqueda)
+                        continue;
+                        ObjStringBuilder.AppendLine(values[i].TrimEnd('\r'));
                         }
-                    }
-
-                    return "";
-
+                File.WriteAllText(vDfile, ObjStringBuilder.ToString().TrimEnd(new char[] {'\n','\r'}),Encoding.UTF8);
+                return "";
 
         }
 #endregion
