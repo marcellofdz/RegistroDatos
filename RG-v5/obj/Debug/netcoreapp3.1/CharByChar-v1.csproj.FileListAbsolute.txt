@@ -1,0 +1,13 @@
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/bin/Debug/netcoreapp3.1/CharByChar-v1
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/bin/Debug/netcoreapp3.1/CharByChar-v1.deps.json
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/bin/Debug/netcoreapp3.1/CharByChar-v1.runtimeconfig.json
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/bin/Debug/netcoreapp3.1/CharByChar-v1.runtimeconfig.dev.json
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/bin/Debug/netcoreapp3.1/CharByChar-v1.dll
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/bin/Debug/netcoreapp3.1/CharByChar-v1.pdb
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.csprojAssemblyReference.cache
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.AssemblyInfoInputs.cache
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.AssemblyInfo.cs
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.csproj.CoreCompileInputs.cache
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.dll
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.pdb
+/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/Debug/netcoreapp3.1/CharByChar-v1.genruntimeconfig.cache
