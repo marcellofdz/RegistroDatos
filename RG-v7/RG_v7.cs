@@ -289,17 +289,147 @@ namespace RG_v7
         }
 #endregion
 
+        public static string HidePassword()
+        {
+            string psw = "";
+            ConsoleKeyInfo key = Console.ReadKey(true);
+            while (key.Key != ConsoleKey.Enter)
+            {
+                if (key.Key != ConsoleKey.Backspace)
+                {
+                    Console.Write("*");
+                    psw += key.KeyChar;
+                }
+                else
+                {
+                    if (psw.Length > 0)
+                    {
+                        psw = psw.Remove(psw.Length - 1);
+                        Console.Write("\b \b");
+                    }
+                }
+                key = Console.ReadKey(true);
+            }
+            Console.WriteLine();
+            return psw;
+        }
 
-
-
-
-
-
-
-
+    public Person(in string id, in string name, in string age, in double ahorros, in Gender gender, in MCstatus mStatus, in Agrad agrad, in string password)
+    {
+        Id = id;
+        Name=name;
+        ahorros = ahorros;
+        password = Password;
+        bitpacking = (age << 4) | (int)gender | (int)MCstatus | (int)aGrad;
 
     }
 
+    public override string ToString() ==> $"{GetType().Name}({nameof(Id)}:{Id}; {nameof(Name)}:{Name}; {nameof(bitpacking)}:{bitpacking}; {nameof(Age)}:{Age}; {nameof(Gender)}:{gender}; {nameof(MStatus)}:{mStatus}; {nameof(AGrad)}:{aGrad}; {nameof(Ahorros)}:{Ahorros}; {nameof(Password)}:{Password};)";
+    {
+    }
+
+
+    public override bool Equals(object obj)
+    {
+        if (obj is Person other)
+        {
+            return Id.Equals(other.Id);
+        }
+
+        return false;        
+    }
+
+
+    public override int GetHashCode()
+    {
+        return Age.GetHashCode();
+    }
+
+    
+    internal static Person FromvDfile(string line)
+    {
+        string[] tokens = line.splint(',');
+        (
+            string id, name,
+            double ahorros,
+            int bitpacking,
+            string password 
+        ) = (
+
+            tokens[0];,
+            tokens[1];
+            double.Parse(tokens[2]),
+            int.Parse(tokens[3]),
+            tokens[4](Gender)(bitpacking & 0b1000));
+            MStatus mStatus = (MStatus)(bitpacking & 0b1000);
+            AGrad aGrad = (AGrad)(bitpacking & 0b11);
+            return new Person(id, name, age, ahorros, gender, mStatus, aGrad, password);
+    }
+
+    internal static Person FromConsole(string record)
+    {(
+        var tokens = record.Split(',');
+        (
+            string id, 
+            string name,
+            int age,
+            double ahorros,
+            string password,
+            Gender gender,
+            MStatus mStatus,
+            Agrad aGrad
+        ) = (
+            to[kens[0],
+            tokens[1],
+            Convert.ToInt32(tokens[3]),
+            double.Parse(tokens[3]),
+            tokens[4],
+            (Gender)int.Parse(tokens[5]),
+            (MStatus)int.Parse(tokens[6]),
+            (AGrad)int.Parse(tokens[7])
+        );
+
+        return new Person(id, name, age, ahorros, gender, mStatus, aGrad, password);
+    }
+
+    internal static void SaveToCsv()
+    {
+        if (Persons.Count() > 0)
+        {
+            File.WriteAllText(vDfile, $"{Environment.NewLine}{p.Id},{p.Name},,{p.Ahorros},{p.Password},{p.Age}");
+        }
+    }
+
+
+    internal string UpdateData()
+    {
+        try
+        {
+            var updated = persons.FindIndex(a => a.Id == this.Id);
+
+            persons[updated] = this;
+            return "Datos modificados de forma correcta."
+        }
+
+        catch(Exception)
+        {
+            return "no se pudieron modificar los datos, valida la excepcion";
+        }
+    }
+
+    public enum Gender 
+    {
+        Male = 0,
+        Female = 4
+    }
+
+    public enum AGrad 
+    {
+        Inicial = 0,
+        Bachiller = 1,
+        Grado = 2,
+        Postgrado =3
+    }
 
 
 
