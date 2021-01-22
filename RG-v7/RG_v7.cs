@@ -2,9 +2,9 @@
 using System.Text;
 using System.IO;
 
-namespace CharByChar_v1
+namespace RG_v7
 {
-    class CharByChar
+    class RG_v7class
     {
         public static void Main(string[] args)
         {
@@ -288,6 +288,9 @@ namespace CharByChar_v1
 
         }
 #endregion
+
+
+
 
 
 

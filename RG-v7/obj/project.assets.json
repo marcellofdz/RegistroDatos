@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/CharByChar-v1.csproj",
-      "projectName": "CharByChar-v1",
-      "projectPath": "/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/CharByChar-v1.csproj",
+      "projectUniqueName": "/mnt/e/repos/programacionII/RegistroDatos/RG-v7/RG_v7.csproj",
+      "projectName": "RG_v7",
+      "projectPath": "/mnt/e/repos/programacionII/RegistroDatos/RG-v7/RG_v7.csproj",
       "packagesPath": "/home/batman/.nuget/packages/",
-      "outputPath": "/mnt/e/repos/programacionII/RegistroDatos/CharByChar_v1/obj/",
+      "outputPath": "/mnt/e/repos/programacionII/RegistroDatos/RG-v7/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/batman/.nuget/NuGet/NuGet.Config"

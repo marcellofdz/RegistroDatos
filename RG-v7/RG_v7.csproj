@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>CharByChar_v1</RootNamespace>
+    <RootNamespace>RG_v7</RootNamespace>
   </PropertyGroup>
 
 </Project>
